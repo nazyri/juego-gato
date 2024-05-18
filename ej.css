@@ -1,0 +1,37 @@
+.contenedor{
+    display: grid;
+    grid-template-columns: repeat(3,60px);
+}
+
+.contenedor > div{
+    border: 2px solid black;
+    width: 60px;
+    height: 60px;
+    font-size: xx-large;
+}
+
+
+
+.contenedor2{
+    display: grid;
+    grid-template-columns: repeat(3,60px);
+}
+
+.contenedor2 > div{
+    border: 2px solid black;
+    width: 60px;
+    height: 60px;
+    font-size: xx-large;
+}
+
+.contenedor3{
+    display: grid;
+    grid-template-columns: repeat(3,60px);
+}
+
+.contenedor3 > div{
+    border: 2px solid black;
+    width: 60px;
+    height: 60px;
+    font-size: xx-large;
+}
