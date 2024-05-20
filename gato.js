@@ -1,3 +1,4 @@
+
 let isPlayerOne = true
 let valor = document.getElementsByClassName('valor')
 
@@ -23,6 +24,7 @@ function userMover(e) {
     }
 }
 
+
 function checkLine(c1,c2,c3) {
     if (
         valor[c1].innerHTML.length &&
@@ -36,3 +38,10 @@ function checkLine(c1,c2,c3) {
 function showWinner(player) {
     document.querySelector('#resultado').innerHTML = player + 'win';
 }
+
+reiniciar.addEventListener("Click", function() {
+    
+})
+
+
+

@@ -4,10 +4,12 @@ body{
     background-color: black;
     color: white;
     font-family: 'Courier New', Courier, monospace;
-    margin: 0;
-    display: grid;
-    
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: -400px;
 }
 
 #contenedor .valor{
@@ -29,4 +31,10 @@ body{
     position: relative;
     top: 10px;
     height: 1rem;
+    font-size: xx-large;
+}
+
+button{
+    margin-top: 20px;
+    margin-left: 200px;
 }

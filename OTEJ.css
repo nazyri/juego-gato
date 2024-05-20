@@ -1,7 +1,7 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: #222;
+    background-color: #0a0a18;
     color: #ccc;
   }
   h1 {
@@ -63,60 +63,55 @@ body {
   }
   
   .cuadro {
-    width: 100px;
-    height: 100px;
     width: 160px;
     height: 160px;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: xx-large;
     font-size: 80px;
     transition: all 0.2s ease-out;
   }
   .cuadro:hover {
-    background-color: rgba(255, 255, 255, 0.12);
+    background-color: rgba(14, 29, 234, 0.12);
     cursor: pointer;
   }
-  
-  .cuadro-superior-izquierdo {
-    border-bottom: 1px solid black;
-    border-right: 1px solid black;
-    border-bottom: 2px solid #ccc;
-    border-right: 2px solid #ccc;
+
+.cuadro-superior-izquierdo {
+    
+    border-bottom: 2px solid #ec0b0b;
+    border-right: 2px solid #dd0606;
   }
   .cuadro-superior-central {
-    border-bottom: 1px solid black;
-    border-bottom: 2px solid #ccc;
+    
+    border-bottom: 2px solid #dd0808;
   }
   .cuadro-superior-derecho {
-    border-bottom: 1px solid black;
-    border-left: 1px solid black;
-    border-bottom: 2px solid #ccc;
-    border-left: 2px solid #ccc;
+   
+    border-bottom: 2px solid #c80d0d;
+    border-left: 2px solid #ea0b0b;
   }
   .cuadro-central-izquierdo {
-    border-right: 1px solid black;
-    border-right: 2px solid #ccc;
+   
+    border-right: 2px solid #dc1414;
   }
-
+  .cuadro-central {
+    border: 2px solid #e50d0d;
+  }
   .cuadro-central-derecho {
-    border-left: 1px solid black;
-    border-left: 2px solid #ccc;
+    
+    border-left: 2px solid #df0b0b;
   }
   .cuadro-inferior-izquierdo {
-    border-top: 1px solid black;
-    border-right: 1px solid black;
-    border-top: 2px solid #ccc;
-    border-right: 2px solid #ccc;
+
+    border-top: 2px solid #db1717;
+    border-right: 2px solid #ba0505;
   }
   .cuadro-inferior-central {
-    border-top: 1px solid black;
-    border-top: 2px solid #ccc;
+    
+    border-top: 2px solid #b40a0a;
   }
   .cuadro-inferior-derecho {
-    border-top: 1px solid black;
-    border-left: 1px solid black;
-    border-top: 2px solid #ccc;
-    border-left: 2px solid #ccc;
+   
+    border-top: 2px solid #911515;
+    border-left: 2px solid #9f1515;
   }
