@@ -39,9 +39,11 @@ function showWinner(player) {
     document.querySelector('#resultado').innerHTML = player + 'win';
 }
 
-reiniciar.addEventListener("Click", function() {
-    
-})
-
+function reiniciar() {
+    for (let index = 0; index < valor.length; index++) {
+      valor[index].innerHTML=''
+        
+    }
+}
 
 
