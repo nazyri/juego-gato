@@ -73,3 +73,22 @@ valorlist.forEach(function (valor, index) {
         turn = !turn
     }, { once: true})
 })
+
+
+
+
+
+function cheakDraw() {
+    if (!isGameOver) {
+        let isDraw = true;
+        valor.forEach(e =>{
+            if (e.innerHTML === "") isDraw = false
+        })
+
+        if (isDraw)
+            isGameOver = true;
+            document.querySelector("#resultado").innerHTML = turn + 'draw';
+            document.querySelector("play-again").style.display = 'inline'
+
+    }
+}

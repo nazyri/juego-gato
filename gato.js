@@ -29,15 +29,18 @@ function checkLine(c1,c2,c3) {
     if (
         valor[c1].innerHTML.length &&
         valor[c1].innerHTML == valor[c2].innerHTML &&
-        valor[c2].innerHTML == valor[c3].innerHTML
+        valor[c2].innerHTML !== valor[c3].innerHTML
     ) {
+
         showWinner(valor[c1].innerHTML);
+        
     }
 }
 
 function showWinner(player) {
     document.querySelector('#resultado').innerHTML = player + 'win';
 }
+
 
 function reiniciar() {
     for (let index = 0; index < valor.length; index++) {
@@ -46,4 +49,8 @@ function reiniciar() {
     }
 }
 
+const computadora = max => {
+    console.log(Math.floor(Math.random()*(max + 1)));
+};
 
+computadora(9)
