@@ -10,7 +10,7 @@ function userMover(e) {
     let valorValue = e.target.innerHTML;
     if (!valorValue.length){
         e.target.innerHTML = isPlayerOne? '✖️':'⭕';
-        isPlayerOne = !isPlayerOne;
+        
 
         checkLine(0,1,2);
         checkLine(3,4,5);
