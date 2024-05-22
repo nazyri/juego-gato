@@ -22,6 +22,8 @@ function userMover(e) {
         checkLine(6,4,2);
         
     }
+    pc()
+
 }
 
 
@@ -40,14 +42,16 @@ function checkLine(c1,c2,c3) {
 let O = 0
 
 let o = document.getElementById("#⭕")
-// function showWinner(jugador){
-    
-//     document.querySelector('#resultado').innerHTML = jugador + 'win';
-//     console.log(jugador);
-//     if(player=="✖️"){
 
-//     }
-// }
+
+function pc() {
+    let arregloCeldas = Array.from(valor)
+    arregloCeldas.filter(cel=>cel.innerHTML=="")
+    let num = Math.floor(Math.random()*arregloCeldas.length)
+    if (arregloCeldas.length>0) {
+        arregloCeldas[num].innerHTML="O"
+    }    
+}
 
 //contador de partidas
 let X = 0
@@ -74,4 +78,8 @@ let x = document.getElementById("#✖️")
             
         }
     }
+
+
     
+
+

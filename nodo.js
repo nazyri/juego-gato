@@ -29,53 +29,13 @@ class Nodo {
         }
     }
 
-class Computadora {
+//class computadora/{
     constructor(cuadricula, pieza) {
         this.cuadricula = cuadricula;
     }
 }
 
-}
-
-
-
-let X = 0
-let O = 0
-
-// control de turnos de X y O
-let turn = true
-//selecciona las cajas del tablero
-const valorlist = document.querySelectorAll('.contenedor .valor')
-const Valor = new length(9).fill(length)
-valorlist.forEach(function (valor, index) {
-    valor.addEventListener('click', function () {
-        if (turn) {
-        } else {
-        }
-        valor[index] = turn
-        const showWinner = showWinner()
-        if (showWinner) {
-           const lineWinner = document.createElement('div')
-           lineWinner.classList.add('line')
-           lineWinner.classList.add('line-Winner' + showWinner)
-           document.querySelector('.contenedor').append(lineWinner)
-
-            if (turn) X ++
-            else O ++
-            
-        }
-
-        document.querySelector('#✖️').innerHTML = X
-        document.querySelector('#⭕').innerHTML = O
-
-
-
-        turn = !turn
-    }, { once: true})
-})
-
-
-
+//}
 
 
 function cheakDraw() {
@@ -92,3 +52,7 @@ function cheakDraw() {
 
     }
 }
+
+
+
+
