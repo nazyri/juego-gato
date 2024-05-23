@@ -1,24 +1,32 @@
 
-let casiilla = document.getElementById("1");
-let casiilla2 = document.getElementById("2");
-let casiilla3 = document.getElementById("3");
-let casiilla4 = document.getElementById("4");
-let casiilla5 = document.getElementById("5");
-let casiilla6 = document.getElementById("6");
-let casiilla7 = document.getElementById("7");
-let casiilla8 = document.getElementById("8");
+let isPlayerOne = false
+let valor = document.getElementsByClassName('valor')
 
-let arreglo=[casiilla,casiilla2,casiilla3,casiilla4,casiilla5,casiilla6,casiilla7,casiilla8]
+for (let index = 0; index < valor.length; index++) {{
+    valor[index].addEventListener('click',userMover);
+}}
 
-arreglo.forEach(element => element.addEventListener("click", function () {
-    element.innerHTML="✖️"
-    juegoAleatorio()
-}))
+function userMover(e) {
+    let valorValue = e.target.innerHTML;
+    if (!valorValue.length){
+        e.target.innerHTML = isPlayerOne
+        isPlayerOne = !isPlayerOne;
+        
+        checkLine(0,1,2);
+        checkLine(3,4,5);
+        checkLine(6,7,8);
+        checkLine(0,3,6);
+        checkLine(1,4,7);
+        checkLine(2,5,8);
+        checkLine(0,4,8);
+        checkLine(6,4,2);
+        
+    }
+    pc()
+
+}
 
 
-
-
-/*
 function checkLine(c1,c2,c3) {
     if (
         valor[c1].innerHTML.length &&
@@ -30,14 +38,13 @@ function checkLine(c1,c2,c3) {
         
     }
 }
-*/
 
 let O = 0
 
 let o = document.getElementById("#⭕")
 
 
-function juegoAleatorio() {
+function pc() {
     let arregloCeldas = Array.from(valor)
     arregloCeldas.filter(cel=>cel.innerHTML=="")
     let num = Math.floor(Math.random()*arregloCeldas.length)
@@ -71,8 +78,3 @@ let x = document.getElementById("#✖️")
             
         }
     }
-
-
-    
-
-

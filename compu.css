@@ -64,3 +64,13 @@ marquee {
    height: 50px;
    width: 250px;
 }
+
+.victoria{
+    visibility: hidden;
+    color: chartreuse;
+}
+
+.derrota{
+    visibility: hidden;
+    color: chartreuse;
+}
