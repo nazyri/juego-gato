@@ -55,11 +55,19 @@ function estado() {
             args.forEach(x => x.style.backgroundColor = "fuchista")
             return true;
         }
-    } 
-   // else{
+    } {
+        
         return false;
     }
-//}
+}
+//comprobamos si ahi alguna linea
+if (sonIguales(botones[0], botones[1], botones[2])) {
+    posicionVictoria = 1;
+}
+
+else if (sonIguales(botones[3], botones[4], botones[5])) {
+    posicionVictoria
+}
 
 
 var a = Math.floor(Math.random()*9);

@@ -1,0 +1,54 @@
+body .boton{
+background-image: url(imagenes/ai-generated-8727460_640.jpg);
+background-size: 250px;
+margin-top: 90px;
+
+}
+
+body .btn{
+    background-image: url(imagenes/game.jpg);
+    background-size: 250px;
+}
+
+h1{
+text-align: center;
+}
+
+h2{
+text-align: center;
+}
+
+h5{
+    text-align: left;
+    margin-left: 560px;
+    margin-top: -290px;
+}
+
+.boton{
+    margin: 50px;
+    margin-left: 490px;
+    width: 250px;
+    height: 200px;
+    color: rgb(78, 26, 66);
+    
+}
+
+.btn{
+    width: 250px;
+    height: 200px;
+    color: rgb(229, 255, 0);
+
+    cursor: pointer;
+}
+
+.btn :hover{
+color: rgb(225, 32, 32);
+
+
+}
+
+.btn a{
+
+    text-decoration: none;
+    color: white;
+}

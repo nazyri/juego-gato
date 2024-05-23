@@ -30,12 +30,20 @@ function checkLine(c1,c2,c3) {
         valor[c1].innerHTML.length &&
         valor[c1].innerHTML == valor[c2].innerHTML &&
         valor[c2].innerHTML == valor[c3].innerHTML
+        
     ) {
-
         showWinner(valor[c1].innerHTML);
         
     }
+
 }
+
+let ganador
+let quienGano
+
+quienGano=valor[c1].innerHTML
+        console.log(quienGano)
+        alert("ganador")
 
 let O = 0
 

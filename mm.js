@@ -1,5 +1,5 @@
 
-let isPlayerOne = false
+let isPlayerOne = "✖️"
 let valor = document.getElementsByClassName('valor')
 
 for (let index = 0; index < valor.length; index++) {{
@@ -9,8 +9,8 @@ for (let index = 0; index < valor.length; index++) {{
 function userMover(e) {
     let valorValue = e.target.innerHTML;
     if (!valorValue.length){
-        e.target.innerHTML = isPlayerOne
-        isPlayerOne = !isPlayerOne;
+        e.target.innerHTML = "✖️"
+        isPlayerOne = "✖️"
         
         checkLine(0,1,2);
         checkLine(3,4,5);
