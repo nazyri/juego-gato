@@ -29,15 +29,18 @@ h5{
     margin-left: 490px;
     width: 250px;
     height: 200px;
-    color: rgb(78, 26, 66);
+    color: rgb(218, 129, 129);
     
+}
+
+.boton a{
+    text-decoration: none;
+    color: red;
 }
 
 .btn{
     width: 250px;
     height: 200px;
-    color: rgb(229, 255, 0);
-
     cursor: pointer;
 }
 

@@ -38,9 +38,10 @@ button{
     margin-top: 20px;
     margin-left: 300px;
     background-color: #3c2048;
-    border: none;
+    border-radius: 14px;
     color: white;
-    
+    width: 80px;
+    height: 40px;
 }
 
 .score{
@@ -70,3 +71,10 @@ marquee {
     color: chartreuse;
 }
 
+.volver{
+    margin-top: 90px;
+    margin-left: -200px;
+    background-color: #9558ae;
+    border-radius: 14px;
+    color: white;   
+}
