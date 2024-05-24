@@ -1,3 +1,10 @@
+body{
+    background-image: url(imagenes/cherry-blossom-tree-1225186_640.jpg);
+    background-repeat: no-repeat;
+    background-size: 1500px;
+}
+
+
 body .boton{
 background-image: url(imagenes/ai-generated-8727460_640.jpg);
 background-size: 250px;
@@ -30,7 +37,7 @@ h5{
     width: 250px;
     height: 200px;
     color: rgb(218, 129, 129);
-    
+    border-radius: 14px;
 }
 
 .boton a{
@@ -42,16 +49,32 @@ h5{
     width: 250px;
     height: 200px;
     cursor: pointer;
+    border-radius: 14px;
 }
 
 .btn :hover{
 color: rgb(225, 32, 32);
-
-
 }
 
 .btn a{
 
     text-decoration: none;
+    color: white;
+}
+
+.contenedor{
+    border: 4px solid white;
+    box-shadow: inset 0 0 15px red, 0 0 15px red;
+    border-radius: 50px;
+}
+
+.neon{
+    font-size: xx-large;
+    text-shadow: 0 0 10px rgb(19, 2, 68), 0 0 20px rgb(12, 5, 67);
+    color: white;
+}
+
+h2{
+    text-shadow: 0 0 10px rgb(19, 2, 68), 0 0 20px rgb(12, 5, 67);
     color: white;
 }
