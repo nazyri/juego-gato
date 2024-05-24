@@ -1,117 +1,76 @@
-body {
-    margin: 0;
-    padding: 0;
-    background-color: #0a0a18;
-    color: #ccc;
-  }
-  h1 {
-    width: 100%;
-    text-align: center;
-  }
-  #ganador {
-    width: 100%;
-    text-align: center;
-    font-weight: 700;
-    font-size: larger;
-    height: 50px;
-  }
-  #puntuacion {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-  }
-  #puntuacion-jugador,
-  #puntuacion-computadora {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  #puntuacion-jugador {
-    margin-right: 15px;
-  }
-  #puntuacion-computadora {
-    margin-left: 15px;
-  }
-  .acciones {
-    margin-bottom: 30px;
-  }
-  #reiniciar {
-    padding: 10px;
-    border: none;
-    color: #ccc;
-    background-color: transparent;
-    border: 1px solid white;
-  }
-  #reiniciar:hover {
-    cursor: pointer;
-    color: #222;
-    background-color: #ccc;
-    border: 1px solid black;
-  }
-  .centro {
-    display: flex;
-    width: 100%;
-    justify-content: center;
-  }
-  
-  #cuadricula {
-    display: grid;
-    grid-template-columns: 100px 100px 100px;
-    grid-template-rows: 100px 100px 100px;
-    grid-template-columns: 160px 160px 160px;
-    grid-template-rows: 160px 160px 160px;
-  }
-  
-  .cuadro {
-    width: 160px;
-    height: 160px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 80px;
-    transition: all 0.2s ease-out;
-  }
-  .cuadro:hover {
-    background-color: rgba(14, 29, 234, 0.12);
-    cursor: pointer;
-  }
+body{
+  width: 100vw;
+  height: 100vw;
+  background-color: black;
+  color: white;
+  font-family: 'Courier New', Courier, monospace;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: -400px;
+}
 
-.cuadro-superior-izquierdo {
-    
-    border-bottom: 2px solid #ec0b0b;
-    border-right: 2px solid #dd0606;
-  }
-  .cuadro-superior-central {
-    
-    border-bottom: 2px solid #dd0808;
-  }
-  .cuadro-superior-derecho {
-   
-    border-bottom: 2px solid #c80d0d;
-    border-left: 2px solid #ea0b0b;
-  }
-  .cuadro-central-izquierdo {
-   
-    border-right: 2px solid #dc1414;
-  }
-  .cuadro-central {
-    border: 2px solid #e50d0d;
-  }
-  .cuadro-central-derecho {
-    
-    border-left: 2px solid #df0b0b;
-  }
-  .cuadro-inferior-izquierdo {
+#contenedor .valor{
+  width: 90px;
+  height: 90px;
+  font-size: 3rem;
+  display: grid;
+  place-items: center;
+  border: 1px solid purple;
+  float: left;
+}
 
-    border-top: 2px solid #db1717;
-    border-right: 2px solid #ba0505;
-  }
-  .cuadro-inferior-central {
-    
-    border-top: 2px solid #b40a0a;
-  }
-  .cuadro-inferior-derecho {
-   
-    border-top: 2px solid #911515;
-    border-left: 2px solid #9f1515;
-  }
+#contenedor{
+width: 276px;
+text-align: center;
+}
+
+#resultado{
+  position: relative;
+  top: 10px;
+  height: 1rem;
+  font-size: xx-large;
+}
+
+button{
+  margin-top: 20px;
+  margin-left: 300px;
+  background-color: #3c2048;
+  border-radius: 14px;
+  color: white;
+  width: 80px;
+  height: 40px;
+}
+
+.score{
+  display: flex;
+  justify-content: space-between;
+  font-size: 1,5em;
+  margin: 15px;
+}
+
+.score div span{
+  height: 2em;
+  width: 2em;
+  background-color: rgb(209, 18, 238);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid;
+}
+
+marquee {
+ height: 50px;
+ width: 250px;
+}
+
+
+.volver{
+  margin-top: 90px;
+  margin-left: -200px;
+  background-color: #9558ae;
+  border-radius: 14px;
+  color: white;   
+}

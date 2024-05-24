@@ -1,80 +1,64 @@
-let turno = 1
-let fichas = ["✖️"]
-let puestas = 0;
-let partidaAcabada = false;
-let victoria = document.getElementById("victoria");
-let div = Array.from(document.getElementsByTagName("div"));
- 
-div.forEach(x => X.addEventListener("click", ponerficha));
 
-function ponerficha(event) {
-    let botonPulsado = event.target;
-    if (!partidaAcabada && botonPulsado.innerHTML == "") {
-        botonPulsado.innerHTML = fichas[turno];
-        puestas += 1;
-
-        let estadoPartida = estado();
-        if (estadoPartida == 0) {
-            cambiarTurno();
-            if (puestas < 9) {
-                ia();
-                estadoPartida = estado();
-                puestas += 1;
-                cambiarTurno();
-            }
-        }
-        if (estadoPartida == 1) {
-            victoria.style.visibility = "visible";
-            partidaAcabada = true;
-        }
-        else if (estadoPartida == -1) {
-            victoria.innerHTML = "has perdido ;("
-            partidaAcabada = true
-            victoria.style.visibility = "visible";
-        }
+let isPlayerOne = "✖️"
+let valor = document.getElementsByClassName('valor')
+for (let index = 0; index < valor.length; index++) {{
+    valor[index].addEventListener('click',userMover);
+}}
+function userMover(e) {
+    let valorValue = e.target.innerHTML;
+    if (!valorValue.length){
+        e.target.innerHTML = "✖️"
+        isPlayerOne = "✖️"
+        checkLine(0,1,2);
+        checkLine(3,4,5);
+        checkLine(6,7,8);
+        checkLine(0,3,6);
+        checkLine(1,4,7);
+        checkLine(2,5,8);
+        checkLine(0,4,8);
+        checkLine(6,4,2);
+    }
+    pc()
+}
+function checkLine(c1,c2,c3) {
+    if (
+        valor[c1].innerHTML.length &&
+        valor[c1].innerHTML == valor[c2].innerHTML &&
+        valor[c2].innerHTML == valor[c3].innerHTML
+    ) {
+        showWinner(valor[c1].innerHTML);
+    }
+}
+let O = 0
+function pc() {
+    let arregloCeldas = Array.from(valor);
+    let celdasVacias = arregloCeldas.filter(cel => cel.innerHTML === "");
+    if (celdasVacias.length > 0) {
+        let num = Math.floor(Math.random() * celdasVacias.length);
+        celdasVacias[num].innerHTML = "⭕";
     }
 }
 
-function cambiarTurno() {
-    if (turno==1) {
-        turno = 0;
+//contador de partidas
+let X = 0
+
+let x = document.getElementById("✖️");
+let o = document.getElementById("⭕");
+
+function showWinner(player) {
+    document.querySelector('#resultado').innerHTML = player + ' win';
+    if (player === "✖️") {
+        let xInt = parseInt(x.innerHTML);
+        x.innerHTML = xInt + 1;
+    } else if (player === "⭕") {
+        let oInt = parseInt(o.innerHTML);
+        o.innerHTML = oInt + 1;
     }
-    else{
-        turno = 1;
-    }
-    /*otra forma es turno += 1; o turno %= 2;*/
 }
-
-function estado() {
-    posicionVictoria = 0;
-    nEstado = 0;
-
-    function sonIguales(...args) {
-        valores = args.map(x=>x.innerHTML);
-        if (valores[0] != "" && valores.every((x, f, arr) => x===arr[0])) {
-            args.forEach(x => x.style.backgroundColor = "fuchista")
-            return true;
+    //boton reiniciar
+    function reiniciar() {
+        for (let index = 0; index < valor.length; index++) {
+          valor[index].innerHTML=''
+            
         }
-    } {
-        
-        return false;
     }
-}
-//comprobamos si ahi alguna linea
-if (sonIguales(botones[0], botones[1], botones[2])) {
-    posicionVictoria = 1;
-}
-
-else if (sonIguales(botones[3], botones[4], botones[5])) {
-    posicionVictoria
-}
-
-
-var a = Math.floor(Math.random()*9);
-alert (a);
-
-//const computadora = max => {
-//    console.log(Math.floor(Math.random()*(max + 1)));
-//};
-
-//computadora(9)

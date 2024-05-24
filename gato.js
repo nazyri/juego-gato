@@ -38,12 +38,7 @@ function checkLine(c1,c2,c3) {
 
 }
 
-let ganador
-let quienGano
 
-quienGano=valor[c1].innerHTML
-        console.log(quienGano)
-        alert("ganador")
 
 let O = 0
 

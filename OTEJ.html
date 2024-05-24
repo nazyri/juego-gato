@@ -8,22 +8,43 @@
 </head>
 <body>
     <h1>tic tac toe</h1>
-    <h2 id="victoria">Has ganado ;)</h2>
-    <script src="OTEJ.js"></script>
+
+    
+  
+    
+    <nav>
+        
+        <div class="score">
+            <span>✖️</span>
+            <div>
+                <span id="✖️">0</span>
+                <span id="⭕">0</span>
+            </div>
+            <span>⭕</span>
+        </div> 
+   </nav>
+
+
+
+
+    <div class="contenedor" id="contenedor">
+        <div class="valor"></div>
+        <div class="valor"></div>
+        <div class="valor"></div>
+        <div class="valor"></div>
+        <div class="valor"></div>
+        <div class="valor"></div>
+        <div class="valor"></div>
+        <div class="valor"></div>
+        <div class="valor"></div>
+        <div id="resultado"></div>
+    </div>
+
+<button class="volver"><a href="/juego.html">Volver</a></button>
+<button id="boton" onclick="reiniciar()">Reiniciar</button>
+
+
+
+<script src="OTEJ.js"></script>
 </body>
 </html>
-let O = 0
-let oInt = document.getElementById("#⭕") 
-    function showWinner(pc) {
-
-}
-
-
-
-document.querySelector('#resultado').innerHTML = pc() + 'win';
-    console.log(pc()); 
-    if(pc()=="⭕"){
-        let oInt = parseInt(o.innerHTML)
-        //console.log(xInt); 
-        o.innerHTML = oInt+=1
-    }
